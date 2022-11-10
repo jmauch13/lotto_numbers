@@ -92,8 +92,8 @@ def pick10():
     print("Good luck!!")
 
 
-playing = True
-while playing:
+
+while True:
     user_input = input(
         "\n\n1. National Games \n2. State Games \nPlease select your game type: ")
     if user_input == "1":
@@ -136,15 +136,16 @@ while playing:
                 newyork_game()
             elif newyork_choice == "3":
                 pick10()
-        else:
-            print("Please select your game")
+        """else:
+            print("Please select your game")"""
 
     again = input("Would you like numbers for another game? ")
-    if again == "no" or "n":
-        print("Goodbye!")
-        playing = False
+    if again == "yes" or "y":
+        print("\nLet's get more lucky numbers!")
+        continue
     else:
-        print("Let's get more numbers!")
+        print("Goodbye!")
+        exit()
 
 
     
